@@ -1,0 +1,103 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	outline: 0;
+	background: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.5;
+	font-family: "Open Sans",sans-serif;
+	margin-bottom: 4px;
+	color: #333;
+    font-weight: 600;
+}
+
+#header {
+	position: relative;
+	border: 0;
+	border-bottom: 1px solid #dedede;
+	padding: 10px 0;
+}
+
+.container, .containerMenu {
+	width: 1200px;
+	margin: 0 auto !important;
+}
+
+.titleTemplate {
+	font-size: 22px;
+	padding-top: 15px;
+	color: #1675a9;
+	font-weight: 600;
+}
+
+.font-header {
+	font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	margin-left: .5rem !important;
+	font-size: 12px;
+	font-weight: bold;
+	color: black;
+}
+
+.logout-header {
+	/* text-decoration: underline !important; */
+	font-size: 26px;
+	color: #2b81b1;
+}
+
+#main {
+	width: 100%;
+}
+
+.recuadroBlanco {
+	background-color: #FFF;
+	color: #4e4e4e !important;
+	border: 1px solid #CCC;
+}
+
+.shadow-2 {
+	box-shadow: 0 0 50px rgba(0,0,0,0.12) !important;
+}
+
+.link_seleccionado {
+	padding-top: 10px;
+	/* border: 2px dashed; */
+	border-radius: 5px;
+	/* vertical-align: top; */
+	background: #fff;
+}
+
+.sidebarLeft {
+	border-right: 1px solid #dadada;
+	padding-right: 20px;
+}
+
+.azul, h1.azul, h2.azul, h3.azul, h4.azul, h5.azul, h6.azul, .azul p, .azul .numerosGrandes, .azul .mesFecha, .azul .preguntas, span.azul, li.azul, li a.azul, ul.azul li, ul.azul li a {
+	color: #1784c7 !important;
+}
+
+.font-size-12, .font-size-12 p {
+	font-size: 12px !important;
+	line-height: 20px !important;
+}
+
+.bold, .bold a, .bold li a, strong, .bold h1, .bold h2, .bold h3, .bold h4, .bold h5, .bold h6, h1.bold, h2.bold, h3.bold, h4.bold, h5.bold, h6.bold {
+	font-weight: 600 !important;
+}
+
+.font-size-40, .font-size-40 p {
+	font-size: 40px !important;
+	line-height: 48px !important;
+}
+
+p {
+	font-family: "Open Sans",sans-serif;
+	font-size: 13px !important;
+	line-height: 22px;
+	color: #666;
+}

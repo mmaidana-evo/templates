@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">    
+
+    <link href="css/template.css" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="row justify-content-md-center ml-0 mr-0 mt-2 mb-2">
+                <div class="col col-lg-6" style="margin-bottom: 0;">
+                    <div class="row" style="margin-bottom: 0;">
+                        <div class="col col-lg-3 text-center">
+                            <a href="#">
+                                <i class="fas fa-laptop-code fa-3x"></i>
+                            </a>
+                        </div>
+                        <div class="col col-lg-9" style="border-left: 1px solid #ccc;">
+                            <h4 class="titleTemplate" style="margin: 0px;padding: 10px 0 10px 14px;">Portal del Contador</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-6" style="text-align: right;">
+                    <p>
+                        <span class="font-header">MAIDANA, MAURICIO OSCAR</span>
+                        <span class="font-header">[20-35004448-6]</span>
+                        <a class="font-header logout-header" style="top: 5px;position: relative;" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div id="main">
+        <div class="container">			
+			<div style="display:block; width:1px; height:1px; background-color:red; cursor:pointer;"></div>
+
+			<div class="contenido" style="padding-top: 20px; padding-bottom: 20px;">
+				<div class="recuadroBlanco shadow-2" style="padding: 20px 10px; padding-bottom: 18px;">
+
+					<div class="row m-0">
+						<div class="col col-lg-3 sidebarLeft link_seleccionado" style="padding-right: 0px;min-height: 107px">
+							<div class="font-size-12 azul ">
+								<h4 class="bold azul" style="text-align: center;">Mi deuda</h4>
+								<h1 class="font-size-40 azul" style="text-align: center;">$0,00</h1>
+							</div>
+							<div id="divEST" class="font-size-12 textCenter mensaje_deuda naranja" style="top: -5px; position: relative; display: none;"></div>
+						</div>															 
+						<div class="col col-lg-9">
+							<div class="row m-0 ">
+									<div class="col col-lg-3 link_seleccionado">
+										<div class="text-center" title="Clave Fiscal: Sin Datos">
+											<i class="fas fa-key mt-2 mb-2"></i>
+											<h6>Clave Fiscal</h6>
+											<p class="bold azul">
+											Sin Datos
+											</p>                                            
+										</div>
+									</div>
+									<div class="col col-lg-3 link_seleccionado">
+										<div id="ContentPlaceHolder1_divDatosBiometricos" class="text-center" title="">
+											<i class="fas fa-user-cog mt-2 mb-2"></i>
+											<h6>Mis Datos Biométricos</h6>
+											<!--<p id="ContentPlaceHolder1_pDatosBiometricos" class="bold azul"></p>-->
+											<p id="pDatosBiometricos" class="bold azul" title="Datos Biométricos: Sin Datos" style="margin-bottom: 10px;" data-ces="DatosBiometricos">Sin Datos</p>
+										</div>
+									</div>
+									<div class="col col-lg-3 link_seleccionado">
+										<div id="ContentPlaceHolder1_divRiesgoSIPER" class="text-center" title="Riesgo SIPER: Sin Categorizar">
+											<div class="relative floatCenter" style="width: 70px">
+												<img src="/sitio/images/iconos/grisOscuro/social/group_36.png" class="icon28">
+											</div>
+											<h6>Riesgo SIPER</h6>
+											<p id="ContentPlaceHolder1_pRiesgoSIPER" class="bold  azul" data-ces="SRegistral">Sin Categorizar</p>
+										</div>
+									</div>
+									<div class="col col-lg-3 link_seleccionado" title="CUIT: ACTIVA. Usted esta habilitado para poder inscribirse algun régimen de la AFIP.">
+										<div class="text-center">
+											<i class="fas fa-address-card mt-2 mb-2"></i>
+											<h6>Estado de mi CUIT</h6>
+											<p id="ContentPlaceHolder1_pEstadoCUIT" class="bold azul" data-ces="SRegistral">Activo</p>											
+										</div>
+									</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				
+				<div class="units-split units-row marginTop-20  margin-0 ">
+
+					<!-- *** CONTENIDO CENTRAL *** -->
+
+					<div class="unit-25">
+						<div class="recuadroBlanco font-size-15" style="border: 0px;">
+
+							<h3 class="normal marginBottom-10">Mis Datos
+								</h3>
+							
+							<h6>Mi Domicilio Fiscal Electrónico</h6>
+							<p class=" font-size-15 light">
+								<span id="ContentPlaceHolder1_lblDFE">No estás adherido</span><br>
+								</p><div style="text-align:center">
+									<a id="ContentPlaceHolder1_btnAdherirDFE" class="button naranja textLeft" onclick="callCES(this,false)" data-ces="DFE" style="color: white !important;width: 100%;"><img src="/sitio/images/iconos/blanco/image/loupe_72.png" class="left"> adherirme</a>
+								</div>
+							<p></p>
+
+							<div class="separadorSolidSimple"></div>							
+
+							<h6>Mi Domicilio Fiscal</h6>
+							<p class=" font-size-15 light">
+								<span id="ContentPlaceHolder1_lblDomReal"> - </span>
+							</p>
+
+							<div class="separadorSolidSimple"></div>
+							
+							<h6>Correo Electrónico</h6>
+							<p class=" font-size-16 light">
+								<span id="ContentPlaceHolder1_lblEMail">No Posee</span>
+							</p>
+
+							<div class="separadorSolidSimple margin-0"></div>
+
+							<h6>Teléfono</h6>
+							<p class=" font-size-15 light">
+								<span id="ContentPlaceHolder1_lblNroTel">No Posee</span>
+							</p>
+
+							<div class="separadorSolidSimple margin-0"></div>
+
+							<h6>Mi Dependencia</h6>
+							<p class=" font-size-15 light">
+								<span id="ContentPlaceHolder1_lblMiDependencia">No agenciado</span>
+								<a href="#" id="ContentPlaceHolder1_btnSolicitarTurno" class="button naranja textLeft" title="Solicitar Turno" alt="Solicitar Turno" style="color:white !important;margin-top: 7px;margin-left: 0px;width: 100%;" onclick="Modificar(event,'dEDCdC0uOFbKRshkIa869w%3d%3d');"><img src="/sitio/images/iconos/blanco/action/date_range_72.png" class="left"> Solicitar Turno</a>
+							</p>
+							
+								<input name="ctl00$ContentPlaceHolder1$hidLatLong" type="hidden" id="hidLatLong">
+								<div id="map" style="height:195px; width:100%;margin-top: -10px; display: none;"></div>
+							
+							<div class="separadorSolidSimple marginTop-15" style="margin-top:15px;"></div>								
+
+						</div>
+					</div>
+
+					<div class="unit-75 sidebarRight">
+						<div class="recuadroBlanco font-size-12" style="border: 0px;">
+							<h3 class="normal marginBottom-10">
+								<img src="/sitio/images/iconos/grisOscuro/Content/inbox_72.png" class="icon28 margin-5">Mis Comunicaciones no leídas</h3>
+
+							<div class="marginLeft-30 ">
+								<h4 class="marginUpDown-15 azul">
+									<img src="/sitio/images/iconos/azul/Communication/email_72.png" class="icon20 margin-5">
+									<a id="lnkAvisosA" onclick="callCES( this , false)" data-ces="eVentanilla">Mensajes</a>
+                                    <div id="ContentPlaceHolder1_divAvisosNL" class="bg-azul-7 marginRight-15 floatRight borderRadius-50 bold blanco hidden font-size-11 textCenter vertical" style="width: 26px !important; height: 26px; padding: 3px;">0</div>
+								</h4>
+								<div class="separadorDottedSimple marginUpDown-5"></div>
+								<h4 class="marginUpDown-15 azul">
+									<img src="/sitio/images/iconos/azul/social/notifications_72.png" class="icon20 margin-5">
+									<a id="lnkAvisosB" onclick="callCES( this , false)" data-ces="eVentanilla">Notificaciones electrónicas</a>
+                                    <div id="ContentPlaceHolder1_divNotifNL" class="bg-azul-7 marginRight-15 floatRight borderRadius-50 bold blanco hidden font-size-11 textCenter vertical" style="width: 26px !important; height: 26px; padding: 3px;">0</div>
+								</h4>
+							</div>
+
+							<div class="separadorSolid"></div>
+
+
+							<h3 class="normal marginBottom-10">
+								<img src="/sitio/images/iconos/grisOscuro/action/today_72.png" class="icon28 margin-5">Mis Vencimientos </h3>
+
+							<div>
+								<!--
+								<div id="va-accordion" class="va-container hidden" style="max-height: 440px; min-height: 140px;">
+									<div class="va-wrapper hidden">
+										<div id="contenidoVencimientos">
+											<h6 class="normal" style="padding-left: 30px">Cargando ...</h6>
+										</div>
+									</div>
+								</div>	
+								-->
+
+								<div id="nuevo_acordion" class="acordion">
+									<!--<div class="va-wrapper hidden">-->
+										<div id="contenidoVencimientos"><h6 class="normal" style="padding-left: 30px">No se pudieron obtener los vencimientos</h6></div>
+									<!--</div>-->
+								</div>
+							</div>
+
+							<div class="separadorSolid"></div>
+
+							<h3 class="normal marginBottom-10">
+								<img src="/sitio/images/iconos/grisOscuro/editor/insert_chart_72.png" class="icon28 margin-5">Mis Impuestos</h3>
+							<div class="separadorBlancoSimple"></div>
+							<div id="tblImp_wrapper" class="dataTables_wrapper no-footer"><table id="tblImp" class="display margin-0 padding-20 dataTable no-footer" role="grid">
+								<thead>
+									<tr role="row"><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 313px;">Descripción</th><th class="textCenter sorting_disabled" rowspan="1" colspan="1" style="width: 225px;">Período</th><th class="textCenter sorting_disabled" rowspan="1" colspan="1" style="width: 201px;">Estado</th></tr>
+								</thead>
+								<tbody>
+									
+								<tr class="odd"><td colspan="3" class="dataTables_empty" valign="top">No estás inscripto en impuestos.</td></tr></tbody>
+
+							</table></div>
+							<div id="paginator_container"></div><!-- div para ubicar el paginador por fuera del contendor de la tabla de datatables -->
+							<div class="separadorSolid"></div>
+
+							<div>
+								<h3 class="normal marginBottom-10 unit-50">
+								<img src="/sitio/images/iconos/grisOscuro/action/perm_contact_calendar_72.png" class="icon28 margin-5">Mis Contactos</h3>								
+								<!--<div style="text-align:right;" class="unit-50">
+									
+								</div>-->
+							</div>
+
+
+							<div class="separadorBlancoSimple"></div>
+														
+
+							<div id="tblCont_wrapper" class="dataTables_wrapper no-footer"><table id="tblCont" class="display margin-0 padding-20 dataTable no-footer" role="grid" style="width: 831px;">
+								<thead>
+									<tr role="row"><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 129px;">Fecha y Hora</th><th class="textCenter sorting_disabled" rowspan="1" colspan="1" style="width: 124px;">Vía Ingreso</th><th class="textCenter sorting_disabled" rowspan="1" colspan="1" style="width: 185px;">Dependencia</th><th class="textCenter sorting_disabled" rowspan="1" colspan="1" style="width: 100px;">Trámite</th><th class="textCenter sorting_disabled vAlignMiddle" rowspan="1" colspan="1" style="width: 143px;">Resultado</th></tr>
+								</thead>
+								<tbody>
+									
+								<tr role="row" class="odd"><td>28/06/2016 14:52</td><td>Turno Presencial</td><td>AGENCIA SEDE POSADAS</td><td>CONSULTAS</td><td class=" vAlignMiddle textCenter">Ingresado</td></tr><tr role="row" class="even"><td>10/02/2016 14:43</td><td>Turno Presencial</td><td>AGENCIA SEDE POSADAS</td><td>CONSULTAS</td><td class=" vAlignMiddle textCenter">Ingresado</td></tr><tr role="row" class="odd"><td>06/10/2015 14:09</td><td>Turno Presencial</td><td>AGENCIA SEDE POSADAS</td><td>CLAVE FISCAL</td><td class=" vAlignMiddle textCenter">Finalizado EXITOSO</td></tr><tr role="row" class="even"><td>16/07/2015 14:51</td><td>Turno Presencial</td><td>AGENCIA SEDE POSADAS</td><td>CONSULTAS</td><td class=" vAlignMiddle textCenter">Finalizado EXITOSO</td></tr></tbody>
+							</table></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div> 
+
+    
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/d4afa0a3cb.js" crossorigin="anonymous"></script>
+
+    <script>
+        // código a ejecutar cuando el DOM está listo para recibir acciones
+        document.addEventListener("DOMContentLoaded", function(event) {
+            // Cuando hacemos scroll carga la funcion
+            window.addEventListener('scroll', function() {
+                let v_header= document.getElementById('header');
+                // calculamos si el usuario se desplazo hacia abajo
+                if(document.documentElement.scrollTop > 0){
+                    v_header.classList.add('header2');
+                }else{
+                    v_header.classList.remove('header2');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
